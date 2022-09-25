@@ -7,7 +7,7 @@ interface Frontmatter {
   descriptionEN: string
   descriptionES: string
   imageUrl: string
-  tags: string
+  tags: string[]
   sourceUrl: string
   demoUrl: string
   priority: number
@@ -17,7 +17,9 @@ const projects = await Astro.glob<Frontmatter>('../projects/*.md')
 ---
 
 {
-  projects.map((project) => {
-    return <ProjectListItem {...project.frontmatter} />
-  })
+  projects
+    .sort((a, b) => a.frontmatter.priority - b.frontmatter.priority)
+    .map((project) => {
+      return <ProjectListItem {...project.frontmatter} />
+    })
 }

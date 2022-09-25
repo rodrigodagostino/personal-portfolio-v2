@@ -1,11 +1,13 @@
 ---
+import Button from './Button.astro'
+
 export interface Props {
   title: string
   slug: string
   descriptionEN: string
   descriptionES: string
   imageUrl: string
-  tags: string
+  tags: string[]
   sourceUrl: string
   demoUrl: string
   priority: number
@@ -23,8 +25,165 @@ const {
 } = Astro.props
 ---
 
-<div class="">
-  <h3>{title}</h3>
-  <p>{descriptionEN}</p>
-  <img src={imageUrl} />
+<div class="project">
+  <div class="project__content">
+    <h3 class="project__title">{title}</h3>
+    <div class="project__description">{descriptionEN}</div>
+    <ul class="project__tags">
+      {tags.map((tag) => <li class="project__tag">{`#${tag}`}</li>)}
+    </ul>
+    <div class="project__actions">
+      <Button href={demoUrl} target="blank" variation="solid-dark"
+        >Live demo</Button
+      >
+      <Button href={sourceUrl} target="blank" variation="solid"
+        >Source code</Button
+      >
+    </div>
+  </div>
+  <div class="project__media">
+    <figure class="project__figure">
+      <img
+        src={imageUrl}
+        class="project__image"
+        width="720"
+        alt={`Screenshot of the ${title} project`}
+      />
+    </figure>
+  </div>
 </div>
+
+<style lang="scss">
+  .project {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 1rem;
+    justify-items: flex-end;
+    text-align: center;
+    max-width: 30rem;
+    margin: 0 auto;
+
+    & + .project {
+      margin-top: 6rem;
+    }
+
+    &__media {
+      grid-column: 1/-1;
+      grid-row: 1;
+    }
+
+    &__content {
+      grid-column: 1/-1;
+      grid-row: 1;
+      z-index: 1;
+
+      & > * + * {
+        margin-top: 1rem;
+      }
+    }
+
+    &__title {
+      font-size: clamp(1.25rem, 5vw, 1.5rem);
+    }
+
+    &__description {
+      background-color: var(--grey-200);
+      padding: 1.25rem;
+      margin: 10rem 1rem 0;
+      border-radius: 0.25rem;
+      box-shadow: var(--box-shadow-2);
+    }
+
+    &__tags {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    &__tag {
+      margin: 0 0.25rem;
+    }
+
+    &__actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &__figure {
+      height: 14rem;
+      margin-top: 2.75rem;
+      border-radius: 0.25rem;
+      box-shadow: var(--box-shadow-1);
+      overflow: hidden;
+    }
+
+    &__image {
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+    }
+  }
+
+  @media screen and (min-width: 42.5em) {
+    .project {
+      align-items: center;
+      text-align: right;
+      max-width: none;
+
+      &__content {
+        grid-column: 8/-1;
+        padding: 0;
+      }
+
+      &__media {
+        grid-column: 1/8;
+      }
+
+      &__figure {
+        height: 20rem;
+        margin: 0;
+      }
+
+      &__description {
+        margin: 1rem 0 0 -5rem;
+      }
+
+      &__tags,
+      &__actions {
+        justify-content: flex-start;
+      }
+
+      &:nth-child(odd) {
+        .project__tags,
+        .project__actions {
+          justify-content: flex-end;
+        }
+      }
+
+      &:nth-child(even) {
+        justify-items: flex-start;
+        text-align: left;
+
+        .project__media {
+          grid-column: 6/-1;
+        }
+
+        .project__content {
+          grid-column: 1/6;
+        }
+
+        .project__description {
+          margin: 1rem -5rem 0 0;
+        }
+      }
+    }
+  }
+</style>

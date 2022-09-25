@@ -3,7 +3,7 @@ title: Vue Movie Search App
 slug: vue-movie-search-app
 descriptionEN: An application that displays the matching movies and series based on the term you have entered. From there, you can choose one of the results to see more information.
 descriptionES: Una aplicación que muestra las películas y series coincidentes según el término que hayas ingresado. Desde allí, podés elegir uno de los resultados para ver más información.
-imageUrl: /assets/vue-movie-search-app.png
+imageUrl: /assets/projects/vue-movie-search-app.png
 tags:
   - javascript
   - vue
