@@ -343,13 +343,41 @@ code {
 
 .container {
   width: 100%;
-  max-width: 60rem;
+  max-width: 58rem;
   margin: 0 auto;
   transition: padding 0.32s ease;
+}
+
+.section:nth-child(2n)::before {
+  content: "";
+  background-color: var(--grey-150);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transform: skewY(4deg);
 }
 
 @media screen and (min-width: 42.5em) {
   body {
     font-size: 1.125rem;
   }
+}
+
+/**
+ * Accessibility
+ */
+.screen-reader-only {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
 }

@@ -3,6 +3,7 @@ export interface Props {
   id: string
   title?: string
 }
+
 const { id, title } = Astro.props
 ---
 
@@ -33,6 +34,18 @@ const { id, title } = Astro.props
     position: relative;
     transition: padding 0.32s ease;
 
+    &::before {
+      content: '';
+      background-color: var(--backgroundColor);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      transform: skewY(4deg);
+    }
+
     &__header + &__content {
       margin-top: 2.5rem;
     }
@@ -46,9 +59,9 @@ const { id, title } = Astro.props
       &::after {
         flex: 1;
         content: '';
-        height: 1px;
+        height: 0.125rem;
         margin-left: 1.25rem;
-        background-color: black;
+        background-color: var(--grey-300);
       }
     }
 
@@ -57,6 +70,12 @@ const { id, title } = Astro.props
       width: 100%;
       background-color: var(--grey-300);
       margin-left: 1.25rem;
+    }
+  }
+
+  @media screen and (min-width: 42.5em) {
+    .section {
+      padding: 8rem 1.5rem;
     }
   }
 </style>
