@@ -6,15 +6,57 @@ export interface Props {
 const { id, title } = Astro.props
 ---
 
-<section id={id}>
-  <slot name="header">
-    {title && <h2>{title}</h2>}
-  </slot>
-  <slot />
+<section id={id} class="section">
+  <div class="container">
+    <slot name="header">
+      {
+        title && (
+          <div class="section__header">
+            <h2 class="section__title">{title}</h2>
+          </div>
+        )
+      }
+    </slot>
+    <div class="section__content">
+      <slot />
+    </div>
+  </div>
 </section>
 
-<style>
-  section {
+<style lang="scss">
+  .section {
     min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 6rem 1.5rem;
+    position: relative;
+    transition: padding 0.32s ease;
+
+    &__header + &__content {
+      margin-top: 2.5rem;
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+      font-size: clamp(1.625rem, 5vw, 2rem);
+      line-height: 1;
+
+      &::after {
+        flex: 1;
+        content: '';
+        height: 1px;
+        margin-left: 1.25rem;
+        background-color: black;
+      }
+    }
+
+    &__title-decoration {
+      height: 0.125rem;
+      width: 100%;
+      background-color: var(--grey-300);
+      margin-left: 1.25rem;
+    }
   }
 </style>

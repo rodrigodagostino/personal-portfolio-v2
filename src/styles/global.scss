@@ -1,0 +1,270 @@
+@font-face {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/lora-v26-latin-700.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("./fonts/lora-v26-latin-700.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/lora-v26-latin-700.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./fonts/lora-v26-latin-700.woff")
+      format("woff"),
+    /* Modern Browsers */ url("./fonts/lora-v26-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("./fonts/lora-v26-latin-700.svg#Lora")
+      format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik-v21-latin-400.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/rubik-v21-latin-400.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/rubik-v21-latin-400.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/rubik-v21-latin-400.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/rubik-v21-latin-400.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/rubik-v21-latin-400.svg#Rubik")
+      format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/rubik-v21-latin-italic.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/rubik-v21-latin-400-italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/rubik-v21-latin-400-italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/rubik-v21-latin-400-italic.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/rubik-v21-latin-400-italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/rubik-v21-latin-400-italic.svg#Rubik") format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/rubik-v21-latin-500.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/rubik-v21-latin-500.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/rubik-v21-latin-500.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/rubik-v21-latin-500.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/rubik-v21-latin-500.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/rubik-v21-latin-500.svg#Rubik")
+      format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/jetbrains-mono-v13-latin-500.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/jetbrains-mono-v13-latin-500.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/jetbrains-mono-v13-latin-500.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/jetbrains-mono-v13-latin-500.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/jetbrains-mono-v13-latin-500.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/jetbrains-mono-v13-latin-500.svg#JetBrainsMono")
+      format("svg"); /* Legacy iOS */
+}
+
+:root {
+  --font-primary: "Lora", Avenir, Helvetica, Arial, sans-serif;
+  --font-secondary: "Rubik", -apple-system, system-ui, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  --color-primary: var(--nebula-500);
+  --color-secondary: var(--grey-800);
+  --color-secondary--dark: var(--grey-900);
+  --white: #fff;
+  --black: #000;
+  --grey-900: #23263b;
+  --grey-800: #36395a;
+  --grey-700: #484c7a;
+  --grey-600: #5a5e9a;
+  --grey-500: #777aaf;
+  --grey-400: #9698c3;
+  --grey-300: #b6b7d5;
+  --grey-200: #d5d5e6;
+  --grey-150: #e5e5f1;
+  --grey-100: #f5f5fa;
+  --grey-050: #fcfcfd;
+  --grey-000: #fff;
+  --pink-900: #59063d;
+  --pink-800: #88085c;
+  --pink-700: #b80979;
+  --pink-600: #e90a96;
+  --pink-500: #f82caa;
+  --pink-400: #fb5abc;
+  --pink-300: #fd89ce;
+  --pink-200: #feb9e2;
+  --pink-100: #ffeaf6;
+  --nebula-900: #141d61;
+  --nebula-800: #1e2b8f;
+  --nebula-700: #2b3cbb;
+  --nebula-600: #3c4fe0;
+  --nebula-500: #5468ff;
+  --nebula-400: #7c8aff;
+  --nebula-300: #a3acff;
+  --nebula-200: #cacfff;
+  --nebula-100: #f2f3ff;
+  --cyan-900: #00526c;
+  --cyan-800: #00769b;
+  --cyan-700: #009bcb;
+  --cyan-600: #0db7eb;
+  --cyan-500: #2cc8f7;
+  --cyan-400: #5adaff;
+  --cyan-300: #89e5ff;
+  --cyan-200: #b9efff;
+  --cyan-100: #e8faff;
+  --green-900: #005e36;
+  --green-800: #028950;
+  --green-700: #06b66c;
+  --green-600: #0de589;
+  --green-500: #5feb9e;
+  --green-400: #88f0b3;
+  --green-300: #aaf4c8;
+  --green-200: #c9f8de;
+  --green-100: #e6fcf3;
+  --orange-900: #963209;
+  --orange-800: #bf470a;
+  --orange-700: #e8600a;
+  --orange-600: #f78125;
+  --orange-500: #faa04b;
+  --orange-400: #fcbc73;
+  --orange-300: #fed59a;
+  --orange-200: #ffe9c3;
+  --orange-100: #fff9ec;
+  --red-900: #83111e;
+  --red-800: #ab1325;
+  --red-700: #d4142a;
+  --red-600: #ee243c;
+  --red-500: #f4495d;
+  --red-400: #f86e7e;
+  --red-300: #fc95a1;
+  --red-200: #febdc5;
+  --red-100: #ffe6e9;
+  --box-shadow-1: 0 1px 1px rgba(54, 57, 90, 0.1),
+    0 2px 2px rgba(54, 57, 90, 0.1), 0 4px 4px rgba(54, 57, 90, 0.1),
+    0 6px 8px rgba(54, 57, 90, 0.1), 0 8px 16px rgba(54, 57, 90, 0.1);
+  --box-shadow-2: 0 1px 1px rgba(54, 57, 90, 0.1),
+    0 2px 2px rgba(54, 57, 90, 0.1), 0 4px 4px rgba(54, 57, 90, 0.1),
+    0 8px 8px rgba(54, 57, 90, 0.1), 0 16px 16px rgba(54, 57, 90, 0.1);
+  --box-shadow-3: 0 2px 1px rgba(54, 57, 90, 0.1),
+    0 4px 2px rgba(54, 57, 90, 0.1), 0 8px 4px rgba(54, 57, 90, 0.1),
+    0 12px 8px rgba(54, 57, 90, 0.1), 0 24px 16px rgba(54, 57, 90, 0.1);
+  --box-shadow-4: 0 2px 1px rgba(54, 57, 90, 0.1),
+    0 4px 2px rgba(54, 57, 90, 0.1), 0 8px 4px rgba(54, 57, 90, 0.1),
+    0 16px 8px rgba(54, 57, 90, 0.1), 0 32px 16px rgba(54, 57, 90, 0.1);
+}
+
+html {
+  font-family: system-ui, sans-serif;
+  scrollbar-color: var(--grey-400) var(--grey-200);
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--grey-200);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: var(--grey-400);
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: var(--grey-500);
+  }
+
+  &:active {
+    background-color: var(--grey-600);
+  }
+}
+
+body {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  color: var(--grey-800);
+  background-color: var(--grey-050);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+h1,
+h2 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+}
+
+* + p,
+p + * {
+  margin-top: 1.25rem;
+}
+
+a {
+  color: var(--grey-600);
+  transition: color 0.32s ease, background-color 0.32s, outline 0.24s ease,
+    outline-offset 0.24s ease;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 2px dashed var(--nebula-300);
+  outline-offset: 0.125rem;
+}
+
+a:hover {
+  color: var(--nebula-500);
+}
+
+code {
+  font-family: var(--font-mono);
+}
+
+.container {
+  width: 100%;
+  max-width: 58rem; /* 928px */
+  margin: 0 auto;
+  transition: padding 0.32s ease;
+}
+
+@media screen and (min-width: 42.5em) {
+  body {
+    font-size: 1.125rem;
+  }
+}

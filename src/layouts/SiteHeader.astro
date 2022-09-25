@@ -1,0 +1,156 @@
+<header class="site-header">
+  <div class="container">
+    <a class="site-logo" href="/">RD’</a>
+    <nav class="site-nav">
+      <a class="site-nav__link" href="#about-me">About me</a>
+      <a class="site-nav__link" href="#skills">Skills</a>
+      <a class="site-nav__link" href="#projects">Projects</a>
+      <a class="site-nav__link" href="#contact">Contact</a>
+      <a class="site-nav__link" href="/en">En</a>
+      <a class="site-nav__link" href="/es">Es</a>
+    </nav>
+  </div>
+</header>
+
+<style lang="scss">
+  .site-header {
+    background-color: var(--grey-050);
+    padding: 1.5rem 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: padding 0.24s ease, box-shadow 0.24s ease;
+    z-index: 20;
+
+    &.is-active {
+      padding: 1rem 0;
+      box-shadow: var(--box-shadow-3);
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .site-logo {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .site-nav {
+    z-index: 10;
+
+    &__link {
+      position: relative;
+      text-transform: uppercase;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.25rem;
+
+      &.is-current {
+        color: var(--nebula-500);
+        background-color: var(--nebula-100);
+      }
+    }
+
+    &__home {
+      font-family: var(--font-primary);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+  }
+
+  .menu-toggle {
+    background-color: transparent;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border: none;
+    border-radius: 0.25rem;
+    outline: none;
+    position: relative;
+    transition: color 0.32s ease, background-color 0.32s, outline 0.24s ease,
+      outline-offset 0.24s ease;
+    cursor: pointer;
+    z-index: 10;
+
+    .menu-toggle__line {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1.5rem;
+      height: 3px;
+      background-color: var(--grey-800);
+      transition: background-color 0.2s ease;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--grey-800);
+        transition: top 150ms ease 0.2s, bottom 150ms ease 0.2s,
+          transform 150ms ease;
+      }
+
+      &::before {
+        top: -0.5rem;
+      }
+
+      &::after {
+        bottom: -0.5rem;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      background-color: var(--grey-150);
+
+      .menu-toggle__line {
+        &::before,
+        &::after {
+          background-color: var(--grey-800);
+        }
+      }
+    }
+
+    &:focus {
+      outline: 2px dashed var(--nebula-300);
+      outline-offset: 0.125rem;
+    }
+
+    &:active,
+    &.is-active {
+      z-index: 120;
+
+      .menu-toggle__line {
+        background-color: transparent;
+
+        &::before,
+        &::after {
+          background-color: var(--nebula-500);
+          transition: top 150ms ease, bottom 150ms ease,
+            transform 150ms ease 0.2s;
+        }
+
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          bottom: 0;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+</style>
