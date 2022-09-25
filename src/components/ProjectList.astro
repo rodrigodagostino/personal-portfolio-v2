@@ -1,0 +1,23 @@
+---
+import ProjectListItem from './ProjectListItem.astro'
+
+interface Frontmatter {
+  title: string
+  slug: string
+  descriptionEN: string
+  descriptionES: string
+  imageUrl: string
+  tags: string
+  sourceUrl: string
+  demoUrl: string
+  priority: number
+}
+
+const projects = await Astro.glob<Frontmatter>('../projects/*.md')
+---
+
+{
+  projects.map((project) => {
+    return <ProjectListItem {...project.frontmatter} />
+  })
+}
