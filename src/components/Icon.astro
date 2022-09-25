@@ -1,0 +1,39 @@
+---
+import BehanceIcon from './Icons/BehanceIcon.astro'
+import CodepenIcon from './Icons/CodepenIcon.astro'
+import EnvelopeIcon from './Icons/EnvelopeIcon.astro'
+import FlagEnIcon from './Icons/FlagEnIcon.astro'
+import FlagEsIcon from './Icons/FlagEsIcon.astro'
+import GitHubIcon from './Icons/GitHubIcon.astro'
+import LinkedInIcon from './Icons/LinkedInIcon.astro'
+import TimesIcon from './Icons/TimesIcon.astro'
+
+export interface Props {
+  name: string
+  size?: number
+}
+
+const { name, size = '1.5rem' } = Astro.props
+---
+
+<span class="icon">
+  {name === 'behance' && <BehanceIcon />}
+  {name === 'codepen' && <CodepenIcon />}
+  {name === 'envelope' && <EnvelopeIcon />}
+  {name === 'flag-en' && <FlagEnIcon />}
+  {name === 'flag-es' && <FlagEsIcon />}
+  {name === 'github' && <GitHubIcon />}
+  {name === 'linkedin' && <LinkedInIcon />}
+  {name === 'times' && <TimesIcon />}
+</span>
+
+<style lang="scss" define:vars={{ size }}>
+  .icon {
+    display: flex;
+
+    & :global(svg) {
+      width: auto;
+      height: var(--size);
+    }
+  }
+</style>
