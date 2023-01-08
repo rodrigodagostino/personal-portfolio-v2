@@ -1,0 +1,5 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "typescript": { "shim": false },
+  "extends": "./.nuxt/tsconfig.json"
+}
