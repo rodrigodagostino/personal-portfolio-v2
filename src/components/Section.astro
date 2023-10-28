@@ -34,14 +34,11 @@ const { id, title } = Astro.props
     position: relative;
     transition: padding 0.32s ease;
 
-    &::before {
+    &:nth-child(2n)::before {
       content: '';
-      background-color: var(--backgroundColor);
+      background-color: var(--grey-150);
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      inset: 0;
       z-index: -1;
       transform: skewY(4deg);
     }

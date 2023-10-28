@@ -3,16 +3,13 @@
   font-style: normal;
   font-weight: 700;
   src: url("./assets/fonts/lora-v26-latin-700.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("./assets/fonts/lora-v26-latin-700.eot?#iefix")
-      format("embedded-opentype"),
+  src:
+    local(""),
+    url("./assets/fonts/lora-v26-latin-700.eot?#iefix") format("embedded-opentype"),
     /* IE6-IE8 */ url("./assets/fonts/lora-v26-latin-700.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("./assets/fonts/lora-v26-latin-700.woff")
-      format("woff"),
-    /* Modern Browsers */ url("./assets/fonts/lora-v26-latin-700.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */ url("./assets/fonts/lora-v26-latin-700.svg#Lora")
-      format("svg"); /* Legacy iOS */
+    /* Super Modern Browsers */ url("./assets/fonts/lora-v26-latin-700.woff") format("woff"),
+    /* Modern Browsers */ url("./assets/fonts/lora-v26-latin-700.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("./assets/fonts/lora-v26-latin-700.svg#Lora") format("svg"); /* Legacy iOS */
 }
 
 @font-face {
@@ -20,17 +17,13 @@
   font-style: normal;
   font-weight: 400;
   src: url("../assets/fonts/rubik-v21-latin-400.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../assets/fonts/rubik-v21-latin-400.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../assets/fonts/rubik-v21-latin-400.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */ url("../assets/fonts/rubik-v21-latin-400.woff")
-      format("woff"),
-    /* Modern Browsers */ url("../assets/fonts/rubik-v21-latin-400.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../assets/fonts/rubik-v21-latin-400.svg#Rubik") format("svg"); /* Legacy iOS */
+  src:
+    local(""),
+    url("../assets/fonts/rubik-v21-latin-400.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/rubik-v21-latin-400.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../assets/fonts/rubik-v21-latin-400.woff") format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/rubik-v21-latin-400.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../assets/fonts/rubik-v21-latin-400.svg#Rubik") format("svg"); /* Legacy iOS */
 }
 
 @font-face {
@@ -38,17 +31,15 @@
   font-style: italic;
   font-weight: 400;
   src: url("../assets/fonts/rubik-v21-latin-italic.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../assets/fonts/rubik-v21-latin-400-italic.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../assets/fonts/rubik-v21-latin-400-italic.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("../assets/fonts/rubik-v21-latin-400-italic.woff") format("woff"),
-    /* Modern Browsers */ url("../assets/fonts/rubik-v21-latin-400-italic.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../assets/fonts/rubik-v21-latin-400-italic.svg#Rubik") format("svg"); /* Legacy iOS */
+  src:
+    local(""),
+    url("../assets/fonts/rubik-v21-latin-400-italic.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/rubik-v21-latin-400-italic.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../assets/fonts/rubik-v21-latin-400-italic.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/rubik-v21-latin-400-italic.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../assets/fonts/rubik-v21-latin-400-italic.svg#Rubik")
+      format("svg"); /* Legacy iOS */
 }
 
 @font-face {
@@ -56,17 +47,13 @@
   font-style: normal;
   font-weight: 500;
   src: url("../assets/fonts/rubik-v21-latin-500.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../assets/fonts/rubik-v21-latin-500.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../assets/fonts/rubik-v21-latin-500.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */ url("../assets/fonts/rubik-v21-latin-500.woff")
-      format("woff"),
-    /* Modern Browsers */ url("../assets/fonts/rubik-v21-latin-500.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../assets/fonts/rubik-v21-latin-500.svg#Rubik") format("svg"); /* Legacy iOS */
+  src:
+    local(""),
+    url("../assets/fonts/rubik-v21-latin-500.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/rubik-v21-latin-500.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../assets/fonts/rubik-v21-latin-500.woff") format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/rubik-v21-latin-500.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../assets/fonts/rubik-v21-latin-500.svg#Rubik") format("svg"); /* Legacy iOS */
 }
 
 @font-face {
@@ -74,26 +61,23 @@
   font-style: normal;
   font-weight: 500;
   src: url("../assets/fonts/jetbrains-mono-v13-latin-500.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../assets/fonts/jetbrains-mono-v13-latin-500.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../assets/fonts/jetbrains-mono-v13-latin-500.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("../assets/fonts/jetbrains-mono-v13-latin-500.woff") format("woff"),
-    /* Modern Browsers */
-      url("../assets/fonts/jetbrains-mono-v13-latin-500.ttf") format("truetype"),
-    /* Safari, Android, iOS */
-      url("../assets/fonts/jetbrains-mono-v13-latin-500.svg#JetBrainsMono")
+  src:
+    local(""),
+    url("../assets/fonts/jetbrains-mono-v13-latin-500.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/jetbrains-mono-v13-latin-500.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../assets/fonts/jetbrains-mono-v13-latin-500.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/jetbrains-mono-v13-latin-500.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../assets/fonts/jetbrains-mono-v13-latin-500.svg#JetBrainsMono")
       format("svg"); /* Legacy iOS */
 }
 
 :root {
   --font-primary: "Lora", Avenir, Helvetica, Arial, sans-serif;
-  --font-secondary: "Rubik", -apple-system, system-ui, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: "JetBrains Mono", Menlo, Monaco, Lucida Console, Liberation Mono,
-    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  --font-secondary: "Rubik", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
   --color-primary: var(--nebula-500);
   --color-secondary: var(--grey-800);
   --color-secondary--dark: var(--grey-900);
@@ -165,18 +149,18 @@
   --red-300: #fc95a1;
   --red-200: #febdc5;
   --red-100: #ffe6e9;
-  --box-shadow-1: 0 1px 1px rgba(54, 57, 90, 0.1),
-    0 2px 2px rgba(54, 57, 90, 0.1), 0 4px 4px rgba(54, 57, 90, 0.1),
-    0 6px 8px rgba(54, 57, 90, 0.1), 0 8px 16px rgba(54, 57, 90, 0.1);
-  --box-shadow-2: 0 1px 1px rgba(54, 57, 90, 0.1),
-    0 2px 2px rgba(54, 57, 90, 0.1), 0 4px 4px rgba(54, 57, 90, 0.1),
-    0 8px 8px rgba(54, 57, 90, 0.1), 0 16px 16px rgba(54, 57, 90, 0.1);
-  --box-shadow-3: 0 2px 1px rgba(54, 57, 90, 0.1),
-    0 4px 2px rgba(54, 57, 90, 0.1), 0 8px 4px rgba(54, 57, 90, 0.1),
-    0 12px 8px rgba(54, 57, 90, 0.1), 0 24px 16px rgba(54, 57, 90, 0.1);
-  --box-shadow-4: 0 2px 1px rgba(54, 57, 90, 0.1),
-    0 4px 2px rgba(54, 57, 90, 0.1), 0 8px 4px rgba(54, 57, 90, 0.1),
-    0 16px 8px rgba(54, 57, 90, 0.1), 0 32px 16px rgba(54, 57, 90, 0.1);
+  --box-shadow-1: 0 1px 1px rgba(54, 57, 90, 0.1), 0 2px 2px rgba(54, 57, 90, 0.1),
+    0 4px 4px rgba(54, 57, 90, 0.1), 0 6px 8px rgba(54, 57, 90, 0.1),
+    0 8px 16px rgba(54, 57, 90, 0.1);
+  --box-shadow-2: 0 1px 1px rgba(54, 57, 90, 0.1), 0 2px 2px rgba(54, 57, 90, 0.1),
+    0 4px 4px rgba(54, 57, 90, 0.1), 0 8px 8px rgba(54, 57, 90, 0.1),
+    0 16px 16px rgba(54, 57, 90, 0.1);
+  --box-shadow-3: 0 2px 1px rgba(54, 57, 90, 0.1), 0 4px 2px rgba(54, 57, 90, 0.1),
+    0 8px 4px rgba(54, 57, 90, 0.1), 0 12px 8px rgba(54, 57, 90, 0.1),
+    0 24px 16px rgba(54, 57, 90, 0.1);
+  --box-shadow-4: 0 2px 1px rgba(54, 57, 90, 0.1), 0 4px 2px rgba(54, 57, 90, 0.1),
+    0 8px 4px rgba(54, 57, 90, 0.1), 0 16px 8px rgba(54, 57, 90, 0.1),
+    0 32px 16px rgba(54, 57, 90, 0.1);
 }
 
 /**
@@ -323,7 +307,10 @@ p + * {
 
 a {
   color: var(--grey-600);
-  transition: color 0.32s ease, background-color 0.32s, outline 0.24s ease,
+  transition:
+    color 0.32s ease,
+    background-color 0.32s,
+    outline 0.24s ease,
     outline-offset 0.24s ease;
   text-decoration: none;
 }
@@ -346,18 +333,6 @@ code {
   max-width: 58rem;
   margin: 0 auto;
   transition: padding 0.32s ease;
-}
-
-.section:nth-child(2n)::before {
-  content: "";
-  background-color: var(--grey-150);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  transform: skewY(4deg);
 }
 
 @media screen and (min-width: 42.5em) {
