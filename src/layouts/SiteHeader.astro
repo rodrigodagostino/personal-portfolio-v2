@@ -2,7 +2,7 @@
   <div class="container">
     <a class="site-logo" href="/">RD’</a>
     <button id="menu-toggle" aria-controls="site-nav" class="menu-toggle">
-      <span class="menu-toggle-label screen-reader-only">Display menu</span>
+      <span class="menu-toggle-label sr-only">Display menu</span>
       <span aria-hidden="true" class="menu-toggle__line"></span>
     </button>
     <nav class="site-nav">
@@ -24,7 +24,9 @@
     top: 0;
     right: 0;
     left: 0;
-    transition: padding 0.24s ease, box-shadow 0.24s ease;
+    transition:
+      padding 0.24s ease,
+      box-shadow 0.24s ease;
     z-index: 20;
 
     &.is-active {
@@ -78,7 +80,10 @@
     border-radius: 0.25rem;
     outline: none;
     position: relative;
-    transition: color 0.32s ease, background-color 0.32s, outline 0.24s ease,
+    transition:
+      color 0.32s ease,
+      background-color 0.32s,
+      outline 0.24s ease,
       outline-offset 0.24s ease;
     cursor: pointer;
     z-index: 10;
@@ -101,7 +106,9 @@
         width: 100%;
         height: 3px;
         background-color: var(--grey-800);
-        transition: top 150ms ease 0.2s, bottom 150ms ease 0.2s,
+        transition:
+          top 150ms ease 0.2s,
+          bottom 150ms ease 0.2s,
           transform 150ms ease;
       }
 
@@ -141,7 +148,9 @@
         &::before,
         &::after {
           background-color: var(--nebula-500);
-          transition: top 150ms ease, bottom 150ms ease,
+          transition:
+            top 150ms ease,
+            bottom 150ms ease,
             transform 150ms ease 0.2s;
         }
 

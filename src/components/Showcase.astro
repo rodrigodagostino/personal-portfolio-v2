@@ -14,12 +14,30 @@ import Icon from './Icon.astro'
   things that <em>make a difference</em>.
 </p>
 <div class="showcase__outreach">
-  <a href="https://github.com/rodrigodagostino"><Logo name="github" /></a>
-  <a href="https://codepen.io/rodrigodagostino"><Logo name="codepen" /></a>
-  <a href="https://behance.net/rodrigodagostino"><Logo name="behance" /></a>
-  <a href="https://www.linkedin.com/in/rodrigodagostino/"><Logo name="linkedin" /></a>
-  <a href="mailto:rodrigo.dagostino@gmail.com"><Icon name="envelope" /></a>
-  <Button href="#" variation="solid-primary">Resume</Button>
+  <a href="https://github.com/rodrigodagostino">
+    <span class="sr-only">Check out my GitHub profile</span>
+    <Logo name="github" />
+  </a>
+  <a href="https://codepen.io/rodrigodagostino">
+    <span class="sr-only">Check out my CodePen profile</span>
+    <Logo name="codepen" />
+  </a>
+  <a href="https://behance.net/rodrigodagostino">
+    <span class="sr-only">Check out my Behance profile</span>
+    <Logo name="behance" />
+  </a>
+  <a href="https://www.linkedin.com/in/rodrigodagostino/">
+    <span class="sr-only">Check out my LinkedIn profile</span>
+    <Logo name="linkedin" />
+  </a>
+  <a href="mailto:rodrigo.dagostino@gmail.com">
+    <span class="sr-only">Send me an email</span>
+    <Icon name="envelope" />
+  </a>
+  <Button href="#" variation="solid-primary">
+    <span class="sr-only">Download my</span>
+     Resume
+  </Button>
 </div>
 
 <style lang="scss">
@@ -57,13 +75,17 @@ import Icon from './Icon.astro'
       align-items: center;
       gap: 1rem;
 
+      a {
+        display: inline-flex;
+      }
+
       :global(svg path) {
         fill: currentColor;
       }
-    }
 
-    a {
-      padding: 0.125rem;
+      :global(.button) {
+        margin-left: 0.5rem;
+      }
     }
   }
 
