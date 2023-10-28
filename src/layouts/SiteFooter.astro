@@ -1,0 +1,26 @@
+---
+import Logo from '../components/Logo.astro'
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <a href="https://github.com/rodrigodagostino/personal-portfolio-v2" target="_blank">
+      Built with <Logo name="astro" />
+    </a>
+  </div>
+</footer>
+
+<style lang="scss">
+  .site-footer {
+    padding-block: 2rem;
+    font-size: 0.875rem;
+
+    .container {
+      text-align: center;
+    }
+
+    :global(.icon) {
+      vertical-align: middle;
+    }
+  }
+</style>
