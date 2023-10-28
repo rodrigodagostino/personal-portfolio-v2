@@ -1,0 +1,83 @@
+---
+import adobe from '../assets/logos/adobe.svg?raw'
+import affinity from '../assets/logos/affinity.svg?raw'
+import astro from '../assets/logos/astro.svg?raw'
+import behance from '../assets/logos/behance.svg?raw'
+import blender from '../assets/logos/blender.svg?raw'
+import bootstrap from '../assets/logos/bootstrap.svg?raw'
+import codepen from '../assets/logos/codepen.svg?raw'
+import contentful from '../assets/logos/contentful.svg?raw'
+import css from '../assets/logos/css.svg?raw'
+import figma from '../assets/logos/figma.svg?raw'
+import git from '../assets/logos/git.svg?raw'
+import github from '../assets/logos/github.svg?raw'
+import html from '../assets/logos/html.svg?raw'
+import javascript from '../assets/logos/javascript.svg?raw'
+import linkedin from '../assets/logos/linkedin.svg?raw'
+import linode from '../assets/logos/linode.svg?raw'
+import netlify from '../assets/logos/netlify.svg?raw'
+import next from '../assets/logos/next.svg?raw'
+import npm from '../assets/logos/npm.svg?raw'
+import nuxt from '../assets/logos/nuxt.svg?raw'
+import php from '../assets/logos/php.svg?raw'
+import react from '../assets/logos/react.svg?raw'
+import sass from '../assets/logos/sass.svg?raw'
+import storybook from '../assets/logos/storybook.svg?raw'
+import svelte from '../assets/logos/svelte.svg?raw'
+import tailwindcss from '../assets/logos/tailwindcss.svg?raw'
+import vite from '../assets/logos/vite.svg?raw'
+import vue from '../assets/logos/vue.svg?raw'
+import webpack from '../assets/logos/webpack.svg?raw'
+import wordpress from '../assets/logos/wordpress.svg?raw'
+
+export interface Props {
+  name: string
+  size?: number
+}
+
+const { name, size = '1.5rem' } = Astro.props
+---
+
+<span class="icon">
+  {name === 'adobe' && <Fragment set:html={adobe} />}
+  {name === 'affinity' && <Fragment set:html={affinity} />}
+  {name === 'astro' && <Fragment set:html={astro} />}
+  {name === 'behance' && <Fragment set:html={behance} />}
+  {name === 'blender' && <Fragment set:html={blender} />}
+  {name === 'bootstrap' && <Fragment set:html={bootstrap} />}
+  {name === 'codepen' && <Fragment set:html={codepen} />}
+  {name === 'contentful' && <Fragment set:html={contentful} />}
+  {name === 'css' && <Fragment set:html={css} />}
+  {name === 'figma' && <Fragment set:html={figma} />}
+  {name === 'git' && <Fragment set:html={git} />}
+  {name === 'github' && <Fragment set:html={github} />}
+  {name === 'html' && <Fragment set:html={html} />}
+  {name === 'javascript' && <Fragment set:html={javascript} />}
+  {name === 'linkedin' && <Fragment set:html={linkedin} />}
+  {name === 'linode' && <Fragment set:html={linode} />}
+  {name === 'netlify' && <Fragment set:html={netlify} />}
+  {name === 'next' && <Fragment set:html={next} />}
+  {name === 'npm' && <Fragment set:html={npm} />}
+  {name === 'nuxt' && <Fragment set:html={nuxt} />}
+  {name === 'php' && <Fragment set:html={php} />}
+  {name === 'react' && <Fragment set:html={react} />}
+  {name === 'sass' && <Fragment set:html={sass} />}
+  {name === 'storybook' && <Fragment set:html={storybook} />}
+  {name === 'svelte' && <Fragment set:html={svelte} />}
+  {name === 'tailwindcss' && <Fragment set:html={tailwindcss} />}
+  {name === 'vite' && <Fragment set:html={vite} />}
+  {name === 'vue' && <Fragment set:html={vue} />}
+  {name === 'webpack' && <Fragment set:html={webpack} />}
+  {name === 'wordpress' && <Fragment set:html={wordpress} />}
+</span>
+
+<style lang="scss" define:vars={{ size }}>
+  .icon {
+    display: inline-flex;
+
+    & :global(svg) {
+      width: auto;
+      height: var(--size);
+    }
+  }
+</style>

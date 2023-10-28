@@ -1,12 +1,8 @@
 ---
-import BehanceIcon from './Icons/BehanceIcon.astro'
-import CodepenIcon from './Icons/CodepenIcon.astro'
-import EnvelopeIcon from './Icons/EnvelopeIcon.astro'
-import FlagEnIcon from './Icons/FlagEnIcon.astro'
-import FlagEsIcon from './Icons/FlagEsIcon.astro'
-import GitHubIcon from './Icons/GitHubIcon.astro'
-import LinkedInIcon from './Icons/LinkedInIcon.astro'
-import TimesIcon from './Icons/TimesIcon.astro'
+import envelope from '../assets/icons/envelope.svg?raw'
+import flagEn from '../assets/icons/flag-en.svg?raw'
+import flagEs from '../assets/icons/flag-es.svg?raw'
+import times from '../assets/icons/times.svg?raw'
 
 export interface Props {
   name: string
@@ -17,19 +13,15 @@ const { name, size = '1.5rem' } = Astro.props
 ---
 
 <span class="icon">
-  {name === 'behance' && <BehanceIcon />}
-  {name === 'codepen' && <CodepenIcon />}
-  {name === 'envelope' && <EnvelopeIcon />}
-  {name === 'flag-en' && <FlagEnIcon />}
-  {name === 'flag-es' && <FlagEsIcon />}
-  {name === 'github' && <GitHubIcon />}
-  {name === 'linkedin' && <LinkedInIcon />}
-  {name === 'times' && <TimesIcon />}
+  {name === 'envelope' && <Fragment set:html={envelope} />}
+  {name === 'flag-en' && <Fragment set:html={flagEn} />}
+  {name === 'flag-es' && <Fragment set:html={flagEs} />}
+  {name === 'times' && <Fragment set:html={times} />}
 </span>
 
 <style lang="scss" define:vars={{ size }}>
   .icon {
-    display: flex;
+    display: inline-flex;
 
     & :global(svg) {
       width: auto;

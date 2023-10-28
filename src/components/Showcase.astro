@@ -1,40 +1,33 @@
 ---
 import Button from './Button.astro'
+import Logo from './Logo.astro'
 import Icon from './Icon.astro'
 ---
 
-<p>Hi there! My name is</p>
+<p class="showcase__intro">Hi there! My name is</p>
 <h1 class="showcase__title">
   <span class="showcase__title-line-1">Rodrigo D’Agostino,</span>
   <span class="showcase__title-line-2">I build things for the web.</span>
 </h1>
-<p>
-  I'm a web designer and front-end developer currently based in Córdoba,
-  Argentina looking to work along with you to make things that <em
-    >make a difference</em
-  >.
+<p class="showcase__subhead">
+  I’m a web designer and front-end developer currently based in Córdoba, Argentina.<br />Let’s make
+  things that <em>make a difference</em>.
 </p>
 <div class="showcase__outreach">
-  <a href="https://github.com/rodrigodagostino">
-    <Icon name="github" />
-  </a>
-  <a href="https://codepen.io/rodrigodagostino">
-    <Icon name="codepen" />
-  </a>
-  <a href="https://behance.net/rodrigodagostino">
-    <Icon name="behance" />
-  </a>
-  <a href="https://www.linkedin.com/in/rodrigodagostino/">
-    <Icon name="linkedin" />
-  </a>
-  <a href="mailto:rodrigo.dagostino@gmail.com">
-    <Icon name="envelope" />
-  </a>
+  <a href="https://github.com/rodrigodagostino"><Logo name="github" /></a>
+  <a href="https://codepen.io/rodrigodagostino"><Logo name="codepen" /></a>
+  <a href="https://behance.net/rodrigodagostino"><Logo name="behance" /></a>
+  <a href="https://www.linkedin.com/in/rodrigodagostino/"><Logo name="linkedin" /></a>
+  <a href="mailto:rodrigo.dagostino@gmail.com"><Icon name="envelope" /></a>
   <Button href="#" variation="solid-primary">Resume</Button>
 </div>
 
 <style lang="scss">
   .showcase {
+    &__intro {
+      font-size: 1.25rem;
+    }
+
     &__title {
       font-size: clamp(2rem, 8vw, 4rem);
       line-height: 1.1;
@@ -49,19 +42,24 @@ import Icon from './Icon.astro'
         color: var(--grey-600);
       }
 
-      & + p {
+      & + .showcase__subhead {
         margin-top: 0.5rem;
       }
     }
 
-    p {
+    &__subhead {
       font-size: 1.25rem;
       margin-top: 0;
     }
+
     &__outreach {
       display: flex;
       align-items: center;
       gap: 1rem;
+
+      :global(svg path) {
+        fill: currentColor;
+      }
     }
 
     a {
@@ -74,7 +72,7 @@ import Icon from './Icon.astro'
       &__title {
         margin-top: 1rem;
 
-        & + p {
+        & + .showcase__subhead {
           margin-top: 1rem;
         }
       }

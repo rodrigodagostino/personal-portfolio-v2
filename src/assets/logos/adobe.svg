@@ -1,5 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133.46 118.11">
-	<polygon points="84.13 0 133.46 0 133.46 118.11 84.13 0" fill="#ee243c"/>
-	<polygon points="49.37 0 0 0 0 118.11 49.37 0" fill="#ee243c"/>
-	<polygon points="66.75 43.53 98.18 118.11 77.58 118.11 68.18 94.36 45.18 94.36 66.75 43.53" fill="#ee243c"/>
+<svg width="200" height="177" viewBox="0 0 200 177">
+  <path fill="#ee243c"
+    d="M126.075 0H200v177zM73.985 0H0v177zM100.03 65.234 147.13 177h-30.87l-14.087-35.592H67.706z" />
 </svg>
