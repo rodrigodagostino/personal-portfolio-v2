@@ -3,21 +3,18 @@ module.exports = {
   env: {
     node: true,
   },
-  plugins: ['prettier'],
   extends: [
     'eslint:recommended',
-    'plugin:prettier/recommended',
     'plugin:astro/recommended',
+    'plugin:astro/jsx-a11y-recommended',
+    'prettier',
   ],
   parserOptions: {
-    ecmaVersion: 2020,
     sourceType: 'module',
+    ecmaVersion: 2020,
     ecmaFeatures: {
       jsx: true,
     },
-  },
-  rules: {
-    'prettier/prettier': 'error',
   },
   overrides: [
     {
@@ -32,10 +29,9 @@ module.exports = {
         extraFileExtensions: ['.astro'],
       },
       rules: {
-        'astro/no-set-text-directive': 'error',
-        'astro/no-unused-css-selector': 'error',
+        // override/add rules settings here, such as:
+        // "astro/no-set-html-directive": "error"
       },
     },
-    // ...
   ],
 }
