@@ -3,7 +3,7 @@ title: Vue Calculator App
 slug: vue-calculator-app
 descriptionEN: Yes, I know! The typical to-do app everyone starts with, right? But go ahead, take a look. As with all my other projects, I take a simple idea and push it a little bit further.
 descriptionES: Yes, I know! The typical to-do app everyone starts with, right? But go ahead, take a look. As with all my other projects, I take a simple idea and push it a little bit further.
-imageUrl: /assets/projects/vue-calculator-app.png
+imageUrl: /assets/images/projects/vue-calculator-app.png
 tags:
   - javascript
   - vue

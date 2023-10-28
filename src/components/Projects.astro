@@ -1,5 +1,5 @@
 ---
-import ProjectListItem from './ProjectListItem.astro'
+import Project from './Project.astro'
 
 interface Frontmatter {
   title: string
@@ -20,6 +20,6 @@ const projects = await Astro.glob<Frontmatter>('../projects/*.md')
   projects
     .sort((a, b) => a.frontmatter.priority - b.frontmatter.priority)
     .map((project) => {
-      return <ProjectListItem {...project.frontmatter} />
+      return <Project {...project.frontmatter} />
     })
 }
