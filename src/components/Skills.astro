@@ -1,0 +1,212 @@
+---
+import Skill from './Skill.astro'
+
+const skills = [
+  {
+    title: 'Programming Languages',
+    items: [
+      {
+        name: 'HTML',
+        logo: 'html',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+      },
+      {
+        name: 'CSS',
+        logo: 'css',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+      },
+      {
+        name: 'JavaScript',
+        logo: 'javascript',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+      },
+      {
+        name: 'Sass',
+        logo: 'sass',
+        url: 'https://sass-lang.com/',
+      },
+      {
+        name: 'TypeScript',
+        logo: 'typescript',
+        url: 'https://www.typescriptlang.org/',
+      },
+      {
+        name: 'PHP',
+        logo: 'php',
+        url: 'https://www.php.net/',
+      },
+    ],
+  },
+  {
+    title: 'Frameworks & Libraries',
+    items: [
+      {
+        name: 'React',
+        logo: 'react',
+        url: 'https://reactjs.org/',
+      },
+      {
+        name: 'Svelte/Kit',
+        logo: 'svelte',
+        url: 'https://svelte.dev/',
+      },
+      {
+        name: 'Vue',
+        logo: 'vue',
+        url: 'https://vuejs.org/',
+      },
+      {
+        name: 'Next',
+        logo: 'next',
+        url: 'https://nextjs.org/',
+      },
+      {
+        name: 'Nuxt',
+        logo: 'nuxt',
+        url: 'https://nuxtjs.org/',
+      },
+      {
+        name: 'Astro',
+        logo: 'astro',
+        url: 'https://astro.build/',
+      },
+      {
+        name: 'Storybook',
+        logo: 'storybook',
+        url: 'https://storybook.js.org/',
+      },
+      {
+        name: 'Tailwind CSS',
+        logo: 'tailwindcss',
+        url: 'https://tailwindcss.com/',
+      },
+      {
+        name: 'Bootstrap',
+        logo: 'bootstrap',
+        url: 'https://getbootstrap.com/',
+      },
+    ],
+  },
+  {
+    title: 'Tools & Platforms',
+    items: [
+      {
+        name: 'NPM',
+        logo: 'npm',
+        url: 'https://npmjs.com/',
+      },
+      {
+        name: 'Git',
+        logo: 'git',
+        url: 'https://git-scm.com/',
+      },
+      {
+        name: 'GitHub',
+        logo: 'github',
+        url: 'https://github.com/',
+      },
+      {
+        name: 'Vite',
+        logo: 'vite',
+        url: 'https://vitejs.dev/',
+      },
+      {
+        name: 'Webpack',
+        logo: 'webpack',
+        url: 'https://webpack.js.org/',
+      },
+      {
+        name: 'Contentful',
+        logo: 'contentful',
+        url: 'https://www.contentful.com/',
+      },
+      {
+        name: 'Storyblok',
+        logo: 'storyblok',
+        url: 'https://www.storyblok.com/',
+      },
+      {
+        name: 'WordPress',
+        logo: 'wordpress',
+        url: 'https://wordpress.org/',
+      },
+      {
+        name: 'Netlify',
+        logo: 'netlify',
+        url: 'https://www.netlify.com/',
+      },
+      {
+        name: 'Linode',
+        logo: 'linode',
+        url: 'https://www.linode.com/',
+      },
+    ],
+  },
+  {
+    title: 'Design',
+    items: [
+      {
+        name: 'Figma',
+        logo: 'figma',
+        url: 'https://www.figma.com/',
+      },
+      {
+        name: 'Adobe Suite',
+        logo: 'adobe',
+        url: 'https://www.adobe.com/',
+      },
+      {
+        name: 'Affinity Suite',
+        logo: 'affinity',
+        url: 'https://affinity.serif.com/',
+      },
+      {
+        name: 'Blender',
+        logo: 'blender',
+        url: 'https://www.blender.org/',
+      },
+    ],
+  },
+]
+---
+
+<div class="skills">
+  {
+    skills.map((category) => (
+      <div class="skills__category">
+        <h3>{category.title}</h3>
+        <ul class="skills__items">
+          {category.items.map((item) => (
+            <li class="skills__item	">
+              <Skill {...item} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</div>
+
+<style lang="scss">
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 6rem;
+    grid-row-gap: 4rem;
+
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(3rem, 4.5rem));
+      grid-gap: 1rem 0.75rem;
+      justify-items: center;
+      margin-top: 1.5rem;
+      list-style: none;
+    }
+  }
+
+  @media screen and (min-width: 42.5em) {
+    .skills {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

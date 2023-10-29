@@ -73,6 +73,10 @@ const { id, title } = Astro.props
   @media screen and (min-width: 42.5em) {
     .section {
       padding: 8rem 1.5rem;
+
+      &__header + &__content {
+        margin-top: 4rem;
+      }
     }
   }
 </style>

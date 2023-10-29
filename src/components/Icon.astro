@@ -12,7 +12,7 @@ export interface Props {
 const { name, size = '1.5rem' } = Astro.props
 ---
 
-<span class="icon">
+<span class=`icon icon--${name}`>
   {name === 'envelope' && <Fragment set:html={envelope} />}
   {name === 'flag-en' && <Fragment set:html={flagEn} />}
   {name === 'flag-es' && <Fragment set:html={flagEs} />}

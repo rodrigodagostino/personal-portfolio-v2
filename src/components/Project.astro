@@ -13,16 +13,7 @@ export interface Props {
   priority: number
 }
 
-const {
-  title,
-  slug,
-  descriptionEN,
-  imageUrl,
-  tags,
-  sourceUrl,
-  demoUrl,
-  priority,
-} = Astro.props
+const { title, slug, descriptionEN, imageUrl, tags, sourceUrl, demoUrl, priority } = Astro.props
 ---
 
 <div class="project">
@@ -33,12 +24,8 @@ const {
       {tags.map((tag) => <li class="project__tag">{`#${tag}`}</li>)}
     </ul>
     <div class="project__actions">
-      <Button href={demoUrl} target="blank" variation="solid-dark">
-        Live demo
-      </Button>
-      <Button href={sourceUrl} target="blank" variation="solid">
-        Source code
-      </Button>
+      <Button href={demoUrl} target="blank" variation="solid-dark">Live demo</Button>
+      <Button href={sourceUrl} target="blank" variation="solid">Source code</Button>
     </div>
   </div>
   <div class="project__media">
@@ -81,10 +68,6 @@ const {
       & > * + * {
         margin-top: 1rem;
       }
-    }
-
-    &__title {
-      font-size: clamp(1.25rem, 5vw, 1.5rem);
     }
 
     &__description {
