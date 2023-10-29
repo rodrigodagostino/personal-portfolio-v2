@@ -1,15 +1,15 @@
 ---
-import envelope from '../assets/icons/envelope.svg?raw'
-import flagEn from '../assets/icons/flag-en.svg?raw'
-import flagEs from '../assets/icons/flag-es.svg?raw'
-import times from '../assets/icons/times.svg?raw'
+import envelope from '../assets/icons/envelope.svg?raw';
+import flagEn from '../assets/icons/flag-en.svg?raw';
+import flagEs from '../assets/icons/flag-es.svg?raw';
+import times from '../assets/icons/times.svg?raw';
 
 export interface Props {
-  name: string
-  size?: number
+  name: string;
+  size?: number;
 }
 
-const { name, size = '1.5rem' } = Astro.props
+const { name, size = '1.5rem' } = Astro.props;
 ---
 
 <span class=`icon icon--${name}`>

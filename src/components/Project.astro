@@ -1,19 +1,19 @@
 ---
-import Button from './Button.astro'
+import Button from './Button.astro';
 
 export interface Props {
-  title: string
-  slug: string
-  descriptionEN: string
-  descriptionES: string
-  imageUrl: string
-  tags: string[]
-  sourceUrl: string
-  demoUrl: string
-  priority: number
+  title: string;
+  slug: string;
+  descriptionEN: string;
+  descriptionES: string;
+  imageUrl: string;
+  tags: string[];
+  sourceUrl: string;
+  demoUrl: string;
+  priority: number;
 }
 
-const { title, slug, descriptionEN, imageUrl, tags, sourceUrl, demoUrl, priority } = Astro.props
+const { title, slug, descriptionEN, imageUrl, tags, sourceUrl, demoUrl, priority } = Astro.props;
 ---
 
 <div class="project">

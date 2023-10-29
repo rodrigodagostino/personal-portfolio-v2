@@ -1,12 +1,12 @@
 ---
 export interface Props {
-  href: string
-  target?: string
-  variation?: string
-  icon?: string
+  href: string;
+  target?: string;
+  variation?: string;
+  icon?: string;
 }
 
-const { href, target, variation = 'flat' } = Astro.props
+const { href, target, variation = 'flat' } = Astro.props;
 ---
 
 <a href={href} target={target} class={`button button--${variation}`}>
