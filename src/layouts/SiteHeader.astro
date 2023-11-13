@@ -1,3 +1,24 @@
+<script>
+  import { throttle } from 'lodash';
+
+  const navLinks = document.querySelectorAll('.site-nav__link');
+  const sections = document.querySelectorAll('.section');
+
+  const setActiveNavLink = throttle(() => {
+    sections.forEach((section, i) => {
+      if (section.getBoundingClientRect().top <= 0) {
+        navLinks.forEach((link) => {
+          link.classList.remove('is-current');
+        });
+        navLinks[i].classList.add('is-current');
+      }
+    });
+  }, 100);
+
+  document.addEventListener('DOMContentLoaded', setActiveNavLink);
+  document.addEventListener('scroll', setActiveNavLink);
+</script>
+
 <header class="site-header">
   <div class="container">
     <a class="site-logo" href="/">RD’</a>
@@ -25,8 +46,8 @@
     right: 0;
     left: 0;
     transition:
-      padding 0.24s ease,
-      box-shadow 0.24s ease;
+      padding 0.24s,
+      box-shadow 0.24s;
     z-index: 20;
 
     &.is-active {
@@ -81,10 +102,10 @@
     outline: none;
     position: relative;
     transition:
-      color 0.32s ease,
-      background-color 0.32s,
-      outline 0.24s ease,
-      outline-offset 0.24s ease;
+      color 0.24s,
+      background-color 0.24s,
+      outline 0.24s,
+      outline-offset 0.24s;
     cursor: pointer;
     z-index: 10;
 
@@ -94,9 +115,9 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: 1.5rem;
-      height: 3px;
+      height: 0.1875rem;
       background-color: var(--grey-800);
-      transition: background-color 0.2s ease;
+      transition: background-color 0.2s;
 
       &::before,
       &::after {
@@ -104,12 +125,12 @@
         position: absolute;
         left: 0;
         width: 100%;
-        height: 3px;
+        height: 0.1875rem;
         background-color: var(--grey-800);
         transition:
-          top 150ms ease 0.2s,
-          bottom 150ms ease 0.2s,
-          transform 150ms ease;
+          top 0.16s 0.2s,
+          bottom 0.16s 0.2s,
+          transform 0.16s;
       }
 
       &::before {
@@ -149,9 +170,9 @@
         &::after {
           background-color: var(--nebula-500);
           transition:
-            top 150ms ease,
-            bottom 150ms ease,
-            transform 150ms ease 0.2s;
+            top 0.16s,
+            bottom 0.16s,
+            transform 0.16s 0.2s;
         }
 
         &::before {
@@ -181,7 +202,7 @@
       padding: 2rem;
       background-color: var(--grey-150);
       transform: translateX(100%);
-      transition: transform 0.32s ease;
+      transition: transform 0.24s;
 
       &.is-expanded {
         box-shadow: var(--box-shadow-3);
@@ -195,7 +216,7 @@
       &__link {
         font-size: 2rem;
         transform: translate3d(-2rem, 0, 0);
-        transition: transform 0.32s ease 0.32s;
+        transition: transform 0.24s 0.24s;
 
         & + * {
           margin-top: 1rem;

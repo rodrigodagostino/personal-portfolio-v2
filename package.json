@@ -13,9 +13,11 @@
     "lint:fix": "eslint --ext .ts,.js,.astro ./ --fix"
   },
   "dependencies": {
-    "astro": "3.4.0"
+    "astro": "3.4.0",
+    "lodash": "4.17.21"
   },
   "devDependencies": {
+    "@types/lodash": "4.14.201",
     "@typescript-eslint/parser": "6.9.0",
     "eslint": "8.52.0",
     "eslint-config-prettier": "9.0.0",

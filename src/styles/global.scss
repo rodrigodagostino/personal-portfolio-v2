@@ -312,15 +312,15 @@ p + * {
 a {
   color: var(--grey-600);
   transition:
-    color 0.32s ease,
-    background-color 0.32s,
-    outline 0.24s ease,
-    outline-offset 0.24s ease;
+    color 0.24s,
+    background-color 0.24s,
+    outline 0.24s,
+    outline-offset 0.24s;
   text-decoration: none;
 }
 
 a:focus {
-  outline: 2px dashed var(--nebula-300);
+  outline: 0.125rem dashed var(--nebula-300);
   outline-offset: 0.125rem;
 }
 
@@ -336,7 +336,7 @@ code {
   width: 100%;
   max-width: 58rem;
   margin: 0 auto;
-  transition: padding 0.32s ease;
+  transition: padding 0.24s;
 }
 
 @media screen and (min-width: 42.5em) {
