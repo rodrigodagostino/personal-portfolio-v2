@@ -6,8 +6,9 @@ import Logo from '../components/Logo.astro';
   <div class="container">
     <a href="https://github.com/rodrigodagostino/personal-portfolio-v2" target="_blank">
       <span class="sr-only">Check out the code of this website that was</span>
-       Built with <Logo name="astro" />
+      <span>Built with<Logo name="astro" /></span>
       <span class="sr-only">Astro</span>
+      <span>by Rodrigo D’Agostino</span>
     </a>
   </div>
 </footer>
@@ -21,7 +22,7 @@ import Logo from '../components/Logo.astro';
       text-align: center;
     }
 
-    :global(.icon) {
+    :global(.logo) {
       vertical-align: middle;
     }
   }
