@@ -6,6 +6,7 @@ import Section from '../components/Section.astro';
 import Showcase from '../components/Showcase.astro';
 import Skills from '../components/Skills.astro';
 import Projects from '../components/Projects.astro';
+import Button from '../components/Button.astro';
 ---
 
 <Layout title="Rodrigo D’Agostino | Web Developer">
@@ -21,7 +22,8 @@ import Projects from '../components/Projects.astro';
       <Projects />
     </Section>
     <Section id="contact" title="Get in touch">
-      <p>Contact</p>
+      <p>Are you interested in working together?<br />Hit me up! My inbox is always open 😉</p>
+      <Button href="mailto:rodrigo.dagostino@gmail.com" variation="solid-dark">Say hello</Button>
     </Section>
   </main>
   <SiteFooter />
