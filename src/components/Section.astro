@@ -1,82 +1,82 @@
 ---
 export interface Props {
-  id: string;
-  title?: string;
+	id: string;
+	title?: string;
 }
 
 const { id, title } = Astro.props;
 ---
 
 <section id={id} class="section">
-  <div class="container">
-    <slot name="header">
-      {
-        title && (
-          <div class="section__header">
-            <h2 class="section__title">{title}</h2>
-          </div>
-        )
-      }
-    </slot>
-    <div class="section__content">
-      <slot />
-    </div>
-  </div>
+	<div class="container">
+		<slot name="header">
+			{
+				title && (
+					<div class="section__header">
+						<h2 class="section__title">{title}</h2>
+					</div>
+				)
+			}
+		</slot>
+		<div class="section__content">
+			<slot />
+		</div>
+	</div>
 </section>
 
 <style lang="scss">
-  .section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 6rem 1.5rem;
-    position: relative;
-    transition: padding 0.24s;
+	.section {
+		min-height: 100vh;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 6rem 1.5rem;
+		position: relative;
+		transition: padding 0.24s;
 
-    &:nth-child(2n)::before {
-      content: '';
-      background-color: var(--grey-150);
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      transform: skewY(4deg);
-    }
+		&:nth-child(2n)::before {
+			content: '';
+			background-color: var(--grey-150);
+			position: absolute;
+			inset: 0;
+			z-index: -1;
+			transform: skewY(4deg);
+		}
 
-    &__header + &__content {
-      margin-top: 2.5rem;
-    }
+		&__header + &__content {
+			margin-top: 2.5rem;
+		}
 
-    &__title {
-      display: flex;
-      align-items: center;
-      font-size: clamp(1.625rem, 5vw, 2rem);
-      line-height: 1;
+		&__title {
+			display: flex;
+			align-items: center;
+			font-size: clamp(1.625rem, 5vw, 2rem);
+			line-height: 1;
 
-      &::after {
-        flex: 1;
-        content: '';
-        height: 0.125rem;
-        margin-left: 1.25rem;
-        background-color: var(--grey-300);
-      }
-    }
+			&::after {
+				flex: 1;
+				content: '';
+				height: 0.125rem;
+				margin-left: 1.25rem;
+				background-color: var(--grey-300);
+			}
+		}
 
-    &__title-decoration {
-      height: 0.125rem;
-      width: 100%;
-      background-color: var(--grey-300);
-      margin-left: 1.25rem;
-    }
-  }
+		&__title-decoration {
+			height: 0.125rem;
+			width: 100%;
+			background-color: var(--grey-300);
+			margin-left: 1.25rem;
+		}
+	}
 
-  @media screen and (min-width: 42.5em) {
-    .section {
-      padding: 8rem 1.5rem;
+	@media screen and (min-width: 42.5em) {
+		.section {
+			padding: 8rem 1.5rem;
 
-      &__header + &__content {
-        margin-top: 4rem;
-      }
-    }
-  }
+			&__header + &__content {
+				margin-top: 4rem;
+			}
+		}
+	}
 </style>

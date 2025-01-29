@@ -5,27 +5,27 @@ import flagEs from '../assets/icons/flag-es.svg?raw';
 import times from '../assets/icons/times.svg?raw';
 
 export interface Props {
-  name: string;
-  size?: number;
+	name: string;
+	size?: number;
 }
 
 const { name, size = '1.5rem' } = Astro.props;
 ---
 
 <span class=`icon icon--${name}`>
-  {name === 'envelope' && <Fragment set:html={envelope} />}
-  {name === 'flag-en' && <Fragment set:html={flagEn} />}
-  {name === 'flag-es' && <Fragment set:html={flagEs} />}
-  {name === 'times' && <Fragment set:html={times} />}
+	{name === 'envelope' && <Fragment set:html={envelope} />}
+	{name === 'flag-en' && <Fragment set:html={flagEn} />}
+	{name === 'flag-es' && <Fragment set:html={flagEs} />}
+	{name === 'times' && <Fragment set:html={times} />}
 </span>
 
 <style lang="scss" define:vars={{ size }}>
-  .icon {
-    display: inline-flex;
+	.icon {
+		display: inline-flex;
 
-    & :global(svg) {
-      width: auto;
-      height: var(--size);
-    }
-  }
+		& :global(svg) {
+			width: auto;
+			height: var(--size);
+		}
+	}
 </style>

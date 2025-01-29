@@ -33,55 +33,55 @@ import webpack from '../assets/logos/webpack.svg?raw';
 import wordpress from '../assets/logos/wordpress.svg?raw';
 
 export interface Props {
-  name: string;
-  size?: number;
+	name: string;
+	size?: number;
 }
 
 const { name, size = '1.5rem' } = Astro.props;
 ---
 
 <span class=`logo logo--${name}`>
-  {name === 'adobe' && <Fragment set:html={adobe} />}
-  {name === 'affinity' && <Fragment set:html={affinity} />}
-  {name === 'astro' && <Fragment set:html={astro} />}
-  {name === 'behance' && <Fragment set:html={behance} />}
-  {name === 'blender' && <Fragment set:html={blender} />}
-  {name === 'bootstrap' && <Fragment set:html={bootstrap} />}
-  {name === 'codepen' && <Fragment set:html={codepen} />}
-  {name === 'contentful' && <Fragment set:html={contentful} />}
-  {name === 'css' && <Fragment set:html={css} />}
-  {name === 'figma' && <Fragment set:html={figma} />}
-  {name === 'git' && <Fragment set:html={git} />}
-  {name === 'github' && <Fragment set:html={github} />}
-  {name === 'html' && <Fragment set:html={html} />}
-  {name === 'javascript' && <Fragment set:html={javascript} />}
-  {name === 'linkedin' && <Fragment set:html={linkedin} />}
-  {name === 'linode' && <Fragment set:html={linode} />}
-  {name === 'netlify' && <Fragment set:html={netlify} />}
-  {name === 'next' && <Fragment set:html={next} />}
-  {name === 'npm' && <Fragment set:html={npm} />}
-  {name === 'nuxt' && <Fragment set:html={nuxt} />}
-  {name === 'php' && <Fragment set:html={php} />}
-  {name === 'react' && <Fragment set:html={react} />}
-  {name === 'sass' && <Fragment set:html={sass} />}
-  {name === 'storyblok' && <Fragment set:html={storyblok} />}
-  {name === 'storybook' && <Fragment set:html={storybook} />}
-  {name === 'svelte' && <Fragment set:html={svelte} />}
-  {name === 'tailwindcss' && <Fragment set:html={tailwindcss} />}
-  {name === 'typescript' && <Fragment set:html={typescript} />}
-  {name === 'vite' && <Fragment set:html={vite} />}
-  {name === 'vue' && <Fragment set:html={vue} />}
-  {name === 'webpack' && <Fragment set:html={webpack} />}
-  {name === 'wordpress' && <Fragment set:html={wordpress} />}
+	{name === 'adobe' && <Fragment set:html={adobe} />}
+	{name === 'affinity' && <Fragment set:html={affinity} />}
+	{name === 'astro' && <Fragment set:html={astro} />}
+	{name === 'behance' && <Fragment set:html={behance} />}
+	{name === 'blender' && <Fragment set:html={blender} />}
+	{name === 'bootstrap' && <Fragment set:html={bootstrap} />}
+	{name === 'codepen' && <Fragment set:html={codepen} />}
+	{name === 'contentful' && <Fragment set:html={contentful} />}
+	{name === 'css' && <Fragment set:html={css} />}
+	{name === 'figma' && <Fragment set:html={figma} />}
+	{name === 'git' && <Fragment set:html={git} />}
+	{name === 'github' && <Fragment set:html={github} />}
+	{name === 'html' && <Fragment set:html={html} />}
+	{name === 'javascript' && <Fragment set:html={javascript} />}
+	{name === 'linkedin' && <Fragment set:html={linkedin} />}
+	{name === 'linode' && <Fragment set:html={linode} />}
+	{name === 'netlify' && <Fragment set:html={netlify} />}
+	{name === 'next' && <Fragment set:html={next} />}
+	{name === 'npm' && <Fragment set:html={npm} />}
+	{name === 'nuxt' && <Fragment set:html={nuxt} />}
+	{name === 'php' && <Fragment set:html={php} />}
+	{name === 'react' && <Fragment set:html={react} />}
+	{name === 'sass' && <Fragment set:html={sass} />}
+	{name === 'storyblok' && <Fragment set:html={storyblok} />}
+	{name === 'storybook' && <Fragment set:html={storybook} />}
+	{name === 'svelte' && <Fragment set:html={svelte} />}
+	{name === 'tailwindcss' && <Fragment set:html={tailwindcss} />}
+	{name === 'typescript' && <Fragment set:html={typescript} />}
+	{name === 'vite' && <Fragment set:html={vite} />}
+	{name === 'vue' && <Fragment set:html={vue} />}
+	{name === 'webpack' && <Fragment set:html={webpack} />}
+	{name === 'wordpress' && <Fragment set:html={wordpress} />}
 </span>
 
 <style lang="scss" define:vars={{ size }}>
-  .logo {
-    display: inline-flex;
+	.logo {
+		display: inline-flex;
 
-    & :global(svg) {
-      width: auto;
-      height: var(--size);
-    }
-  }
+		& :global(svg) {
+			width: auto;
+			height: var(--size);
+		}
+	}
 </style>

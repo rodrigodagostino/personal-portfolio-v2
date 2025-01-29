@@ -2,24 +2,24 @@
 import Project from './Project.astro';
 
 interface Frontmatter {
-  title: string;
-  slug: string;
-  descriptionEN: string;
-  descriptionES: string;
-  imageUrl: string;
-  tags: string[];
-  sourceUrl: string;
-  demoUrl: string;
-  priority: number;
+	title: string;
+	slug: string;
+	descriptionEN: string;
+	descriptionES: string;
+	imageUrl: string;
+	tags: string[];
+	sourceUrl: string;
+	demoUrl: string;
+	priority: number;
 }
 
 const projects = await Astro.glob<Frontmatter>('../projects/*.md');
 ---
 
 {
-  projects
-    .sort((a, b) => a.frontmatter.priority - b.frontmatter.priority)
-    .map((project) => {
-      return <Project {...project.frontmatter} />;
-    })
+	projects
+		.sort((a, b) => a.frontmatter.priority - b.frontmatter.priority)
+		.map((project) => {
+			return <Project {...project.frontmatter} />;
+		})
 }

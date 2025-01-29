@@ -1,263 +1,263 @@
 <script>
-  import { throttle } from 'lodash';
+	import { throttle } from 'lodash';
 
-  const navLinks = document.querySelectorAll('.site-nav__link');
-  const sections = document.querySelectorAll('.section');
+	const navLinks = document.querySelectorAll<HTMLElement>('.site-nav__link');
+	const sections = document.querySelectorAll<HTMLElement>('.section');
 
-  const setActiveNavLink = throttle(() => {
-    sections.forEach((section, i) => {
-      if (section.getBoundingClientRect().top <= 0) {
-        navLinks.forEach((link) => {
-          link.classList.remove('is-current');
-        });
-        navLinks[i].classList.add('is-current');
-      }
-    });
-  }, 100);
+	const setActiveNavLink = throttle(() => {
+		sections.forEach((section, i) => {
+			if (section.getBoundingClientRect().top <= 0) {
+				navLinks.forEach((link) => {
+					link.classList.remove('is-current');
+				});
+				navLinks[i].classList.add('is-current');
+			}
+		});
+	}, 100);
 
-  document.addEventListener('DOMContentLoaded', setActiveNavLink);
-  document.addEventListener('scroll', setActiveNavLink);
+	document.addEventListener('DOMContentLoaded', setActiveNavLink);
+	document.addEventListener('scroll', setActiveNavLink);
 </script>
 
 <header class="site-header">
-  <div class="container">
-    <a class="site-logo" href="/">RD’</a>
-    <button id="menu-toggle" aria-controls="site-nav" class="menu-toggle">
-      <span class="menu-toggle-label sr-only">Display menu</span>
-      <span aria-hidden="true" class="menu-toggle__line"></span>
-    </button>
-    <nav class="site-nav">
-      <a class="site-nav__link" href="#about-me">About me</a>
-      <a class="site-nav__link" href="#skills">Skills</a>
-      <a class="site-nav__link" href="#projects">Projects</a>
-      <a class="site-nav__link" href="#contact">Contact</a>
-      <a class="site-nav__link" href="/en">En</a>
-      <a class="site-nav__link" href="/es">Es</a>
-    </nav>
-  </div>
+	<div class="container">
+		<a class="site-logo" href="/">RD’</a>
+		<button id="menu-toggle" aria-controls="site-nav" class="menu-toggle">
+			<span class="menu-toggle-label sr-only">Display menu</span>
+			<span aria-hidden="true" class="menu-toggle__line"></span>
+		</button>
+		<nav class="site-nav">
+			<a class="site-nav__link" href="#about-me">About me</a>
+			<a class="site-nav__link" href="#skills">Skills</a>
+			<a class="site-nav__link" href="#projects">Projects</a>
+			<a class="site-nav__link" href="#contact">Contact</a>
+			<a class="site-nav__link" href="/en">En</a>
+			<a class="site-nav__link" href="/es">Es</a>
+		</nav>
+	</div>
 </header>
 
 <style lang="scss">
-  .site-header {
-    background-color: var(--grey-050);
-    padding: 1.5rem;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    transition:
-      padding 0.24s,
-      box-shadow 0.24s;
-    z-index: 20;
+	.site-header {
+		background-color: var(--grey-050);
+		padding: 1.5rem;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		transition:
+			padding 0.24s,
+			box-shadow 0.24s;
+		z-index: 20;
 
-    &.is-active {
-      padding: 1rem 1.5rem;
-      box-shadow: var(--box-shadow-3);
-    }
+		&.is-active {
+			padding: 1rem 1.5rem;
+			box-shadow: var(--box-shadow-3);
+		}
 
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
+		.container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
 
-  .site-logo {
-    font-family: var(--font-primary);
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1;
-  }
+	.site-logo {
+		font-family: var(--font-primary);
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: 1;
+	}
 
-  .site-nav {
-    z-index: 10;
+	.site-nav {
+		z-index: 10;
 
-    &__link {
-      position: relative;
-      text-transform: uppercase;
-      padding: 0.5rem 0.75rem;
-      border-radius: 0.25rem;
+		&__link {
+			position: relative;
+			text-transform: uppercase;
+			padding: 0.5rem 0.75rem;
+			border-radius: 0.25rem;
 
-      &.is-current {
-        color: var(--nebula-500);
-        background-color: var(--nebula-100);
-      }
-    }
+			&.is-current {
+				color: var(--nebula-500);
+				background-color: var(--nebula-100);
+			}
+		}
 
-    &__home {
-      font-family: var(--font-primary);
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 1;
-    }
-  }
+		&__home {
+			font-family: var(--font-primary);
+			font-size: 2rem;
+			font-weight: 700;
+			line-height: 1;
+		}
+	}
 
-  .menu-toggle {
-    background-color: transparent;
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0;
-    border: none;
-    border-radius: 0.25rem;
-    outline: none;
-    position: relative;
-    transition:
-      color 0.24s,
-      background-color 0.24s,
-      outline 0.24s,
-      outline-offset 0.24s;
-    cursor: pointer;
-    z-index: 10;
+	.menu-toggle {
+		background-color: transparent;
+		width: 2.5rem;
+		height: 2.5rem;
+		padding: 0;
+		border: none;
+		border-radius: 0.25rem;
+		outline: none;
+		position: relative;
+		transition:
+			color 0.24s,
+			background-color 0.24s,
+			outline 0.24s,
+			outline-offset 0.24s;
+		cursor: pointer;
+		z-index: 10;
 
-    .menu-toggle__line {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 1.5rem;
-      height: 0.1875rem;
-      background-color: var(--grey-800);
-      transition: background-color 0.2s;
+		.menu-toggle__line {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 1.5rem;
+			height: 0.1875rem;
+			background-color: var(--grey-800);
+			transition: background-color 0.2s;
 
-      &::before,
-      &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 0.1875rem;
-        background-color: var(--grey-800);
-        transition:
-          top 0.16s 0.2s,
-          bottom 0.16s 0.2s,
-          transform 0.16s;
-      }
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 0.1875rem;
+				background-color: var(--grey-800);
+				transition:
+					top 0.16s 0.2s,
+					bottom 0.16s 0.2s,
+					transform 0.16s;
+			}
 
-      &::before {
-        top: -0.5rem;
-      }
+			&::before {
+				top: -0.5rem;
+			}
 
-      &::after {
-        bottom: -0.5rem;
-      }
-    }
+			&::after {
+				bottom: -0.5rem;
+			}
+		}
 
-    &:focus,
-    &:hover {
-      background-color: var(--grey-150);
+		&:focus,
+		&:hover {
+			background-color: var(--grey-150);
 
-      .menu-toggle__line {
-        &::before,
-        &::after {
-          background-color: var(--grey-800);
-        }
-      }
-    }
+			.menu-toggle__line {
+				&::before,
+				&::after {
+					background-color: var(--grey-800);
+				}
+			}
+		}
 
-    &:focus {
-      outline: 2px dashed var(--nebula-300);
-      outline-offset: 0.125rem;
-    }
+		&:focus {
+			outline: 2px dashed var(--nebula-300);
+			outline-offset: 0.125rem;
+		}
 
-    &:active,
-    &.is-active {
-      z-index: 120;
+		&:active,
+		&.is-active {
+			z-index: 120;
 
-      .menu-toggle__line {
-        background-color: transparent;
+			.menu-toggle__line {
+				background-color: transparent;
 
-        &::before,
-        &::after {
-          background-color: var(--nebula-500);
-          transition:
-            top 0.16s,
-            bottom 0.16s,
-            transform 0.16s 0.2s;
-        }
+				&::before,
+				&::after {
+					background-color: var(--nebula-500);
+					transition:
+						top 0.16s,
+						bottom 0.16s,
+						transform 0.16s 0.2s;
+				}
 
-        &::before {
-          top: 0;
-          transform: rotate(45deg);
-        }
+				&::before {
+					top: 0;
+					transform: rotate(45deg);
+				}
 
-        &::after {
-          bottom: 0;
-          transform: rotate(-45deg);
-        }
-      }
-    }
-  }
+				&::after {
+					bottom: 0;
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
 
-  @media screen and (max-width: 42.4375em) {
-    .site-nav {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: right;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: calc(100vw - 6rem);
-      height: 100vh;
-      padding: 2rem;
-      background-color: var(--grey-150);
-      transform: translateX(100%);
-      transition: transform 0.24s;
+	@media screen and (max-width: 42.4375em) {
+		.site-nav {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: right;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: calc(100vw - 6rem);
+			height: 100vh;
+			padding: 2rem;
+			background-color: var(--grey-150);
+			transform: translateX(100%);
+			transition: transform 0.24s;
 
-      &.is-expanded {
-        box-shadow: var(--box-shadow-3);
-        transform: translateX(0);
+			&.is-expanded {
+				box-shadow: var(--box-shadow-3);
+				transform: translateX(0);
 
-        .site-nav__link {
-          transform: translate3d(0, 0, 0);
-        }
-      }
+				.site-nav__link {
+					transform: translate3d(0, 0, 0);
+				}
+			}
 
-      &__link {
-        font-size: 2rem;
-        transform: translate3d(-2rem, 0, 0);
-        transition: transform 0.24s 0.24s;
+			&__link {
+				font-size: 2rem;
+				transform: translate3d(-2rem, 0, 0);
+				transition: transform 0.24s 0.24s;
 
-        & + * {
-          margin-top: 1rem;
-        }
-      }
-    }
+				& + * {
+					margin-top: 1rem;
+				}
+			}
+		}
 
-    .site-logo {
-      font-family: var(--font-primary);
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 1;
-    }
-  }
+		.site-logo {
+			font-family: var(--font-primary);
+			font-size: 2rem;
+			font-weight: 700;
+			line-height: 1;
+		}
+	}
 
-  @media screen and (min-width: 42.5em) {
-    .site-header {
-      .container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-    }
+	@media screen and (min-width: 42.5em) {
+		.site-header {
+			.container {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
 
-    .site-nav {
-      display: flex;
-      flex-direction: row;
-      position: relative;
+		.site-nav {
+			display: flex;
+			flex-direction: row;
+			position: relative;
 
-      &__link {
-        font-size: 1rem;
+			&__link {
+				font-size: 1rem;
 
-        & + * {
-          margin-left: 1rem;
-        }
-      }
-    }
+				& + * {
+					margin-left: 1rem;
+				}
+			}
+		}
 
-    .menu-toggle {
-      display: none;
-    }
-  }
+		.menu-toggle {
+			display: none;
+		}
+	}
 </style>
